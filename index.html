@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAPTER 49-52</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- //====================QUESTION 01=========================// -->
+    <div class="form-container">
+        <h2>Signup Form</h2>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <!-- display form -->
+    <div id="result" class="result-container" style="display: none;">
+        <h3>Submitted Data:</h3>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+    </div>
+
+    <!-- //====================QUESTION 02=========================// -->
+
+    <div class="content">
+        <h2>Product Title</h2>
+        <p>
+            This is a brief description of the item. It provides an overview of the product’s main features and
+            benefits.
+            <span class="more-text">
+                Here is the full detail of the product. This section contains additional information, specifications,
+                user reviews, and any other relevant details that a potential customer might find useful before making a
+                purchase. It's designed to answer any questions that might not be covered in the brief description.
+            </span>
+        </p>
+        <span class="read-more-button" onclick="toggleDetails()">Read More</span>
+    </div>
+
+    <!-- //====================QUESTION 03=========================// -->
+
+    <div class="form-container" id="studentFormContainer">
+        <h3>Add / Edit Student</h3>
+        <form id="studentForm">
+            <input type="hidden" id="rowIndex" value="-1">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="grade">Grade:</label><br>
+            <input type="text" id="grade" name="grade" required><br><br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <button onclick="showForm()">Add New Student</button>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
